@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Retrieve Medication - HealthPick</title>
+    <title>Отримання ліків - HealthPick</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="manifest" href="manifest.json">
     <meta name="theme-color" content="#4F46E5">
@@ -15,13 +15,13 @@
             <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
             </svg>
-            Back to Locations
+            Назад до локацій
         </a>
 
         <!-- Header -->
         <header class="text-center mb-12">
-            <h1 class="text-2xl font-bold text-gray-800 mb-2">Retrieve Your Medication</h1>
-            <p class="text-gray-600">Follow the instructions to open the medbox</p>
+            <h1 class="text-2xl font-bold text-gray-800 mb-2">Отримайте ваші ліки</h1>
+            <p class="text-gray-600">Дотримуйтесь інструкцій, щоб відкрити медбокс</p>
         </header>
 
         <!-- Main Content -->
@@ -29,8 +29,8 @@
             <div class="bg-white rounded-lg shadow-md p-6">
                 <!-- Location Info -->
                 <div class="mb-8 text-center">
-                    <h2 class="text-lg font-semibold text-gray-800 mb-2">Downtown Medbox</h2>
-                    <p class="text-gray-600">123 Main St, Downtown</p>
+                    <h2 class="text-lg font-semibold text-gray-800 mb-2">Медбокс у центрі міста</h2>
+                    <p class="text-gray-600">вул. Головна 123, Центр</p>
                 </div>
 
                 <!-- Proximity Check -->
@@ -45,10 +45,10 @@
                             </svg>
                         </div>
                     </div>
-                    <p class="text-center text-gray-600 mb-4">Checking your proximity to the medbox...</p>
+                    <p class="text-center text-gray-600 mb-4">Перевірка вашої близькості до медбоксу...</p>
                     <button onclick="checkProximity()" 
                             class="w-full py-3 px-4 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition duration-200">
-                        Check Location
+                        Перевірити місцезнаходження
                     </button>
                 </div>
 
@@ -61,11 +61,11 @@
                                       d="M5 13l4 4L19 7"/>
                             </svg>
                         </div>
-                        <p class="text-green-600 font-medium">You're in range!</p>
+                        <p class="text-green-600 font-medium">Ви в зоні доступу!</p>
                     </div>
                     <button onclick="openMedboxCell()" 
                             class="w-full py-3 px-4 bg-green-600 text-white rounded-lg hover:bg-green-700 transition duration-200">
-                        Open Cell
+                        Відкрити комірку
                     </button>
                 </div>
 
@@ -77,9 +77,9 @@
                                   d="M5 13l4 4L19 7"/>
                         </svg>
                     </div>
-                    <h3 class="text-lg font-medium text-gray-800 mb-2">Cell Opened Successfully!</h3>
-                    <p class="text-gray-600 mb-4">Please collect your medication from Cell #123</p>
-                    <p class="text-sm text-gray-500">The cell will automatically close in 30 seconds</p>
+                    <h3 class="text-lg font-medium text-gray-800 mb-2">Комірка успішно відкрита!</h3>
+                    <p class="text-gray-600 mb-4">Будь ласка, заберіть ваші ліки з комірки №123</p>
+                    <p class="text-sm text-gray-500">Комірка автоматично закриється через 30 секунд</p>
                 </div>
 
                 <!-- Error Message (Hidden by default) -->

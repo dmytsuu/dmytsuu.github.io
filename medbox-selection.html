@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Select Medbox - HealthPick</title>
+    <title>Вибір медбоксу - HealthPick</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="manifest" href="manifest.json">
     <meta name="theme-color" content="#4F46E5">
@@ -17,13 +17,13 @@
             <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
             </svg>
-            Back to Products
+            Назад до препаратів
         </a>
 
         <!-- Header -->
         <header class="text-center mb-12">
-            <h1 class="text-2xl font-bold text-gray-800 mb-2">Select Medbox Location</h1>
-            <p class="text-gray-600">Choose a convenient pickup location</p>
+            <h1 class="text-2xl font-bold text-gray-800 mb-2">Виберіть місце розташування медбоксу</h1>
+            <p class="text-gray-600">Оберіть зручне місце отримання</p>
         </header>
 
         <!-- Main Content -->
@@ -37,11 +37,11 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
                         </svg>
-                        Your location
+                        Ваше місцезнаходження
                     </p>
                     <button onclick="getCurrentLocation()" 
                             class="text-sm text-indigo-600 hover:text-indigo-800">
-                        Update Location
+                        Оновити місцезнаходження
                     </button>
                 </div>
             </div>
@@ -52,13 +52,13 @@
                 <div class="bg-white rounded-lg shadow-md p-6">
                     <div class="flex items-center justify-between">
                         <div>
-                            <h2 class="text-lg font-semibold text-gray-800">Downtown Medbox</h2>
-                            <p class="text-sm text-gray-600 mt-1">123 Main St, Downtown</p>
-                            <p class="text-sm text-gray-500 mt-1">0.5 miles away</p>
+                            <h2 class="text-lg font-semibold text-gray-800">Медбокс у центрі міста</h2>
+                            <p class="text-sm text-gray-600 mt-1">вул. Головна 123, Центр</p>
+                            <p class="text-sm text-gray-500 mt-1">0.8 км від вас</p>
                         </div>
                         <a href="medication-retrieval.html" 
                            class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700">
-                            Select
+                            Вибрати
                         </a>
                     </div>
                 </div>
@@ -67,13 +67,13 @@
                 <div class="bg-white rounded-lg shadow-md p-6">
                     <div class="flex items-center justify-between">
                         <div>
-                            <h2 class="text-lg font-semibold text-gray-800">Westside Pharmacy</h2>
-                            <p class="text-sm text-gray-600 mt-1">456 West Ave</p>
-                            <p class="text-sm text-gray-500 mt-1">1.2 miles away</p>
+                            <h2 class="text-lg font-semibold text-gray-800">Західна аптека</h2>
+                            <p class="text-sm text-gray-600 mt-1">Західний проспект 456</p>
+                            <p class="text-sm text-gray-500 mt-1">1.9 км від вас</p>
                         </div>
                         <a href="medication-retrieval.html" 
                            class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700">
-                            Select
+                            Вибрати
                         </a>
                     </div>
                 </div>
@@ -82,13 +82,13 @@
                 <div class="bg-white rounded-lg shadow-md p-6">
                     <div class="flex items-center justify-between">
                         <div>
-                            <h2 class="text-lg font-semibold text-gray-800">Eastside Health Center</h2>
-                            <p class="text-sm text-gray-600 mt-1">789 East Blvd</p>
-                            <p class="text-sm text-gray-500 mt-1">2.0 miles away</p>
+                            <h2 class="text-lg font-semibold text-gray-800">Східний медичний центр</h2>
+                            <p class="text-sm text-gray-600 mt-1">Східний бульвар 789</p>
+                            <p class="text-sm text-gray-500 mt-1">3.2 км від вас</p>
                         </div>
                         <a href="medication-retrieval.html" 
                            class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700">
-                            Select
+                            Вибрати
                         </a>
                     </div>
                 </div>
@@ -107,9 +107,9 @@
 
         // Mock locations
         const locations = [
-            { name: 'Downtown Medbox', lat: 51.505, lng: -0.09 },
-            { name: 'Westside Pharmacy', lat: 51.51, lng: -0.1 },
-            { name: 'Eastside Health Center', lat: 51.515, lng: -0.08 }
+            { name: 'Медбокс у центрі міста', lat: 51.505, lng: -0.09 },
+            { name: 'Західна аптека', lat: 51.51, lng: -0.1 },
+            { name: 'Східний медичний центр', lat: 51.515, lng: -0.08 }
         ];
 
         // Add markers
@@ -125,7 +125,7 @@
                     const { latitude, longitude } = position.coords;
                     map.setView([latitude, longitude], 13);
                     L.marker([latitude, longitude])
-                        .bindPopup('Your Location')
+                        .bindPopup('Ваше місцезнаходження')
                         .addTo(map);
                 }, error => {
                     console.error('Error getting location:', error);

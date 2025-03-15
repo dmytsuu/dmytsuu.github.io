@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Authorization - HealthPick</title>
+    <title>Авторизація - HealthPick</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="manifest" href="manifest.json">
     <meta name="theme-color" content="#4F46E5">
@@ -15,13 +15,13 @@
             <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
             </svg>
-            Back
+            Назад
         </a>
 
         <!-- Header -->
         <header class="text-center mb-12">
-            <h1 class="text-2xl font-bold text-gray-800 mb-2">Authorization Required</h1>
-            <p class="text-gray-600">Please provide the required documentation for verification</p>
+            <h1 class="text-2xl font-bold text-gray-800 mb-2">Потрібна авторизація</h1>
+            <p class="text-gray-600">Будь ласка, надайте необхідні документи для перевірки</p>
         </header>
 
         <!-- Main Content -->
@@ -29,7 +29,7 @@
             <div class="bg-white rounded-lg shadow-md p-6 space-y-6">
                 <!-- Photo ID Upload -->
                 <div class="space-y-4">
-                    <h2 class="text-lg font-semibold text-gray-800">Photo ID</h2>
+                    <h2 class="text-lg font-semibold text-gray-800">Фото документа</h2>
                     <div class="border-2 border-dashed border-gray-300 rounded-lg p-6 text-center">
                         <div class="space-y-2">
                             <svg class="mx-auto h-12 w-12 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -38,19 +38,19 @@
                             </svg>
                             <div class="text-sm text-gray-600">
                                 <label for="photo-upload" class="relative cursor-pointer rounded-md font-medium text-indigo-600 hover:text-indigo-500">
-                                    <span>Upload a file</span>
+                                    <span>Завантажити файл</span>
                                     <input id="photo-upload" name="photo-upload" type="file" class="sr-only" accept="image/*">
                                 </label>
-                                <p class="pl-1">or drag and drop</p>
+                                <p class="pl-1">або перетягніть файл</p>
                             </div>
-                            <p class="text-xs text-gray-500">PNG, JPG, GIF up to 10MB</p>
+                            <p class="text-xs text-gray-500">PNG, JPG, GIF до 10МБ</p>
                         </div>
                     </div>
                 </div>
 
                 <!-- Prescription Upload -->
                 <div class="space-y-4">
-                    <h2 class="text-lg font-semibold text-gray-800">Prescription</h2>
+                    <h2 class="text-lg font-semibold text-gray-800">Рецепт</h2>
                     <div class="border-2 border-dashed border-gray-300 rounded-lg p-6 text-center">
                         <div class="space-y-2">
                             <svg class="mx-auto h-12 w-12 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -59,27 +59,27 @@
                             </svg>
                             <div class="text-sm text-gray-600">
                                 <label for="prescription-upload" class="relative cursor-pointer rounded-md font-medium text-indigo-600 hover:text-indigo-500">
-                                    <span>Upload a file</span>
+                                    <span>Завантажити файл</span>
                                     <input id="prescription-upload" name="prescription-upload" type="file" class="sr-only" accept="image/*,application/pdf">
                                 </label>
-                                <p class="pl-1">or drag and drop</p>
+                                <p class="pl-1">або перетягніть файл</p>
                             </div>
-                            <p class="text-xs text-gray-500">PDF, PNG, JPG up to 10MB</p>
+                            <p class="text-xs text-gray-500">PDF, PNG, JPG до 10МБ</p>
                         </div>
                     </div>
                 </div>
 
                 <!-- Patient Information -->
                 <div class="space-y-4">
-                    <h2 class="text-lg font-semibold text-gray-800">Patient Information</h2>
+                    <h2 class="text-lg font-semibold text-gray-800">Інформація про пацієнта</h2>
                     <div class="space-y-4">
                         <div>
-                            <label for="patient-name" class="block text-sm font-medium text-gray-700">Full Name</label>
+                            <label for="patient-name" class="block text-sm font-medium text-gray-700">Повне ім'я</label>
                             <input type="text" id="patient-name" 
                                    class="mt-1 w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-600 focus:border-transparent">
                         </div>
                         <div>
-                            <label for="dob" class="block text-sm font-medium text-gray-700">Date of Birth</label>
+                            <label for="dob" class="block text-sm font-medium text-gray-700">Дата народження</label>
                             <input type="date" id="dob" 
                                    class="mt-1 w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-600 focus:border-transparent">
                         </div>
@@ -89,7 +89,7 @@
                 <!-- Submit Button -->
                 <button onclick="handleSubmit()" 
                         class="w-full py-3 px-4 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition duration-200">
-                    Submit for Verification
+                    Надіслати на перевірку
                 </button>
 
                 <!-- Status Message -->
@@ -102,7 +102,7 @@
         function handleSubmit() {
             // Mock implementation
             const statusMsg = document.getElementById('statusMessage');
-            statusMsg.textContent = 'Documents submitted successfully! Redirecting to product selection...';
+            statusMsg.textContent = 'Документи успішно надіслано! Перенаправлення на вибір препаратів...';
             statusMsg.classList.remove('hidden');
             statusMsg.classList.add('bg-green-100', 'text-green-700');
 
