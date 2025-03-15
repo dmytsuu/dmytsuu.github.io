@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retrieve Medication - HealthPick</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#4F46E5">
+</head>
+<body class="bg-gray-100 min-h-screen">
+    <div class="container mx-auto px-4 py-8">
+        <!-- Back Button -->
+        <a href="medbox-selection.html" class="inline-flex items-center text-indigo-600 mb-6">
+            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+            </svg>
+            Back to Locations
+        </a>
+
+        <!-- Header -->
+        <header class="text-center mb-12">
+            <h1 class="text-2xl font-bold text-gray-800 mb-2">Retrieve Your Medication</h1>
+            <p class="text-gray-600">Follow the instructions to open the medbox</p>
+        </header>
+
+        <!-- Main Content -->
+        <main class="max-w-md mx-auto">
+            <div class="bg-white rounded-lg shadow-md p-6">
+                <!-- Location Info -->
+                <div class="mb-8 text-center">
+                    <h2 class="text-lg font-semibold text-gray-800 mb-2">Downtown Medbox</h2>
+                    <p class="text-gray-600">123 Main St, Downtown</p>
+                </div>
+
+                <!-- Proximity Check -->
+                <div id="proximityCheck" class="mb-8">
+                    <div class="flex items-center justify-center mb-4">
+                        <div class="w-16 h-16 rounded-full bg-yellow-100 flex items-center justify-center">
+                            <svg class="w-8 h-8 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+                                      d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+                                      d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <p class="text-center text-gray-600 mb-4">Checking your proximity to the medbox...</p>
+                    <button onclick="checkProximity()" 
+                            class="w-full py-3 px-4 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition duration-200">
+                        Check Location
+                    </button>
+                </div>
+
+                <!-- Open Cell Section (Hidden by default) -->
+                <div id="openCell" class="hidden">
+                    <div class="text-center mb-6">
+                        <div class="w-16 h-16 rounded-full bg-green-100 mx-auto flex items-center justify-center mb-4">
+                            <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+                                      d="M5 13l4 4L19 7"/>
+                            </svg>
+                        </div>
+                        <p class="text-green-600 font-medium">You're in range!</p>
+                    </div>
+                    <button onclick="openMedboxCell()" 
+                            class="w-full py-3 px-4 bg-green-600 text-white rounded-lg hover:bg-green-700 transition duration-200">
+                        Open Cell
+                    </button>
+                </div>
+
+                <!-- Success Message (Hidden by default) -->
+                <div id="successMessage" class="hidden text-center">
+                    <div class="w-16 h-16 rounded-full bg-green-100 mx-auto flex items-center justify-center mb-4">
+                        <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+                                  d="M5 13l4 4L19 7"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-medium text-gray-800 mb-2">Cell Opened Successfully!</h3>
+                    <p class="text-gray-600 mb-4">Please collect your medication from Cell #123</p>
+                    <p class="text-sm text-gray-500">The cell will automatically close in 30 seconds</p>
+                </div>
+
+                <!-- Error Message (Hidden by default) -->
+                <div id="errorMessage" class="hidden mt-4 p-3 bg-red-100 text-red-700 rounded-lg text-center"></div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        function checkProximity() {
+            // Always allow access without proximity check
+            document.getElementById('proximityCheck').classList.add('hidden');
+            document.getElementById('openCell').classList.remove('hidden');
+        }
+
+        function openMedboxCell() {
+            // Mock cell opening
+            document.getElementById('openCell').classList.add('hidden');
+            document.getElementById('successMessage').classList.remove('hidden');
+            
+            // Auto-redirect after 5 seconds
+            setTimeout(() => {
+                window.location.href = 'index.html';
+            }, 5000);
+        }
+    </script>
+</body>
+</html> 
